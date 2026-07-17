@@ -157,8 +157,8 @@ function initCanvasBackground() {
         if (totalDistance < mousePosition.radius) {
           this.currentRadius = this.baseRadius * (1 + (mousePosition.radius - totalDistance) / mousePosition.radius * 0.5);
           const forceFactor = (mousePosition.radius - totalDistance) / mousePosition.radius;
-          this.x += (distanceX / totalDistance) * forceFactor * 0.2;
-          this.y += (distanceY / totalDistance) * forceFactor * 0.2;
+          this.x += (distanceX / totalDistance) * forceFactor * 0.6;
+          this.y += (distanceY / totalDistance) * forceFactor * 0.6;
         } else {
           this.currentRadius = this.baseRadius;
         }
@@ -211,7 +211,7 @@ function initCanvasBackground() {
         const totalDistance = Math.hypot(distanceX, distanceY);
 
         if (totalDistance < mousePosition.radius) {
-          const lineOpacity = (1 - totalDistance / mousePosition.radius) * 0.25;
+          const lineOpacity = (1 - totalDistance / mousePosition.radius) * 0.55;
           canvasContext.strokeStyle = `rgba(${strokeColorRGB}, ${lineOpacity})`;
           canvasContext.lineWidth = 0.6;
           canvasContext.beginPath();
