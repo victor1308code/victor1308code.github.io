@@ -9,7 +9,7 @@ O projeto foi construído inteiramente utilizando tecnologias web nativas (**HTM
 ## 🔗 Demonstração Online
 
 O site está publicado e pode ser acessado na internet através do link:
-👉 **[https://victor1308code.github.io](https://victor1308code.github.io/)**
+👉 **[https://victor1308code.github.io/portifolio-victor-oliveira/](https://victor1308code.github.io/portifolio-victor-oliveira/)**
 
 ---
 
@@ -54,11 +54,11 @@ Para rodar o projeto localmente em sua máquina, basta clonar o repositório e a
 
 1. **Clonar o Repositório**:
    ```bash
-   git clone https://github.com/victor1308code/victor1308code.github.io.git
+   git clone https://github.com/victor1308code/portifolio-victor-oliveira.git
    ```
 2. **Navegar para a pasta**:
    ```bash
-   cd victor1308code.github.io
+   cd portifolio-victor-oliveira
    ```
 3. **Executar**:
    Basta dar duplo clique no arquivo `sobre.html` (ou usar uma extensão de servidor local do VS Code como a *Live Server*).
