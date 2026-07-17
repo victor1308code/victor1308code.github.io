@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="theme-light font-sans">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sobre Mim — Victor Hugo Oliveira</title>
+  <meta name="description" content="Portfólio pessoal e acadêmico de Victor Hugo Costa Silva De Oliveira. Conheça meu perfil, habilidades, formação e experiências.">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="theme-light font-sans">
+
+  <canvas id="canvas-bg"></canvas>
+
+  <div class="site-frame">
+    <div class="frame-line frame-top"></div>
+    <div class="frame-line frame-right"></div>
+    <div class="frame-line frame-bottom"></div>
+    <div class="frame-line frame-left"></div>
+  </div>
+
+  <div class="app-container">
+    <header class="site-header">
+      <div class="header-top">
+        <h1 class="site-title">Victor Hugo</h1>
+        <p class="site-subtitle">Assessor de TIC & Estudante de ADS</p>
+        
+        <nav class="nav-menu">
+          <ul class="nav-list">
+            <li class="nav-item active">
+              <span class="nav-dot"></span>
+              <a href="sobre.html" class="nav-link">Sobre mim</a>
+            </li>
+            <li class="nav-item">
+              <span class="nav-dot"></span>
+              <a href="formacao.html" class="nav-link">Formação</a>
+            </li>
+            <li class="nav-item">
+              <span class="nav-dot"></span>
+              <a href="portfolio.html" class="nav-link">Portfólio</a>
+            </li>
+            <li class="nav-item">
+              <span class="nav-dot"></span>
+              <a href="contato.html" class="nav-link">Contato</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+
+      <div class="style-controls">
+        <div class="control-group">
+          <span class="control-label">Tema</span>
+          <div class="control-buttons">
+            <button id="theme-light" class="btn-toggle active">Claro</button>
+            <button id="theme-dark" class="btn-toggle">Escuro</button>
+          </div>
+        </div>
+        
+        <div class="control-group">
+          <span class="control-label">Tipografia</span>
+          <div class="control-buttons">
+            <button id="font-sans-btn" class="btn-toggle active">Sans</button>
+            <button id="font-mono-btn" class="btn-toggle">Mono</button>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main class="main-content">
+      <section id="sobre">
+        <h2 class="section-title">Sobre Mim</h2>
+        
+        <div class="intro-text">
+          <p>
+            Olá! Sou <strong>Victor Hugo Costa Silva De Oliveira</strong>. 
+            Atuo como <strong>Assessor de TIC</strong> em órgão público e sou graduando em <strong>Análise e Desenvolvimento de Sistemas</strong>. 
+            Combino experiência prática em suporte técnico corporativo e desenvolvimento frontend (Angular) com estudo constante 
+            dos modernos conceitos de arquitetura de software para entregar soluções eficientes e de alta performance.
+          </p>
+        </div>
+
+        <div class="info-grid">
+          <div class="info-block">
+            <h3 class="info-label">Perfil Profissional</h3>
+            <p class="info-value">
+              Experiência com infraestrutura e suporte de tecnologia na SEAC-DF, alinhando soluções tecnológicas 
+              aos objetivos organizacionais. Desenvolvedor web freelancer focado em soluções frontend responsivas e otimização de interfaces.
+            </p>
+          </div>
+
+          <div class="info-block">
+            <h3 class="info-label">Comunicação & Idiomas</h3>
+            <p class="info-value">
+              Inglês avançado e facilidade de comunicação técnica corporativa. Capacidade analítica para identificar pontos críticos, 
+              gerenciar demandas de usuários e resolver problemas de hardware e software sob pressão.
+            </p>
+          </div>
+
+          <div class="info-block">
+            <h3 class="info-label">Principais Competências</h3>
+            <p class="info-value">
+              SQL e PostgreSQL &bull; Desenvolvimento Web (Angular 19) &bull; Java e JDBC &bull; 
+              Suporte Técnico corporativo &bull; Segurança da Informação &bull; Redes e Configuração de TI.
+            </p>
+          </div>
+
+          <div class="info-block">
+            <h3 class="info-label">Contato Direto</h3>
+            <p class="info-value">
+              <strong>Email:</strong> victor1308pro@gmail.com<br>
+              <strong>Telefone:</strong> (61) 98127-9861<br>
+              <strong>Localidade:</strong> Distrito Federal, Brasil
+            </p>
+          </div>
+        </div>
+
+        <div style="margin-top: 40px; display: flex; gap: 15px; flex-wrap: wrap;">
+          <a href="curriculo.pdf" download="Curriculo_Victor_Hugo.pdf" class="btn-action">Baixar Currículo (PDF)</a>
+          <a href="https://github.com/victor1308code" target="_blank" rel="noopener" class="btn-action">GitHub</a>
+          <a href="https://linkedin.com/in/victoroliveira1308" target="_blank" rel="noopener" class="btn-action">LinkedIn</a>
+        </div>
+      </section>
+
+      <footer class="site-footer">
+        <p>&copy; 2026 Victor Hugo. Feito com HTML, CSS e JS puros.</p>
+      </footer>
+    </main>
+  </div>
+
+  <script src="js/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="theme-light font-sans">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contato — Victor Hugo Oliveira</title>
+  <meta name="description" content="Entre em contato com Victor Hugo Costa Silva De Oliveira. Envie uma mensagem diretamente pelo formulário.">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="theme-light font-sans">
+
+  <canvas id="canvas-bg"></canvas>
+
+  <div class="site-frame">
+    <div class="frame-line frame-top"></div>
+    <div class="frame-line frame-right"></div>
+    <div class="frame-line frame-bottom"></div>
+    <div class="frame-line frame-left"></div>
+  </div>
+
+  <div class="app-container">
+    <header class="site-header">
+      <div class="header-top">
+        <h1 class="site-title">Victor Hugo</h1>
+        <p class="site-subtitle">Assessor de TIC & Estudante de ADS</p>
+        
+        <nav class="nav-menu">
+          <ul class="nav-list">
+            <li class="nav-item">
+              <span class="nav-dot"></span>
+              <a href="sobre.html" class="nav-link">Sobre mim</a>
+            </li>
+            <li class="nav-item">
+              <span class="nav-dot"></span>
+              <a href="formacao.html" class="nav-link">Formação</a>
+            </li>
+            <li class="nav-item">
+              <span class="nav-dot"></span>
+              <a href="portfolio.html" class="nav-link">Portfólio</a>
+            </li>
+            <li class="nav-item active">
+              <span class="nav-dot"></span>
+              <a href="contato.html" class="nav-link">Contato</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+
+      <div class="style-controls">
+        <div class="control-group">
+          <span class="control-label">Tema</span>
+          <div class="control-buttons">
+            <button id="theme-light" class="btn-toggle active">Claro</button>
+            <button id="theme-dark" class="btn-toggle">Escuro</button>
+          </div>
+        </div>
+        
+        <div class="control-group">
+          <span class="control-label">Tipografia</span>
+          <div class="control-buttons">
+            <button id="font-sans-btn" class="btn-toggle active">Sans</button>
+            <button id="font-mono-btn" class="btn-toggle">Mono</button>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main class="main-content">
+      <section id="contato">
+        <h2 class="section-title">Contato</h2>
+        
+        <div class="intro-text" style="margin-bottom: 30px;">
+          <p>
+            Deseja falar sobre oportunidades, parcerias acadêmicas ou projetos de TI? 
+            Preencha o formulário abaixo ou envie uma mensagem diretamente para <strong>victor1308pro@gmail.com</strong>.
+          </p>
+        </div>
+
+        <form id="contact-form" class="contact-form" novalidate>
+          <div class="form-group">
+            <label for="name" class="form-label">Nome Completo</label>
+            <input type="text" id="name" name="name" class="form-control" placeholder="Seu nome">
+            <span class="error-message">Erro</span>
+          </div>
+
+          <div class="form-group">
+            <label for="email" class="form-label">E-mail</label>
+            <input type="email" id="email" name="email" class="form-control" placeholder="seu-email@dominio.com">
+            <span class="error-message">Erro</span>
+          </div>
+
+          <div class="form-group">
+            <label for="message" class="form-label">Mensagem</label>
+            <textarea id="message" name="message" class="form-control form-textarea" placeholder="Escreva sua mensagem aqui..."></textarea>
+            <span class="error-message">Erro</span>
+          </div>
+
+          <button type="submit" class="btn-submit">Enviar Mensagem</button>
+        </form>
+      </section>
+
+      <footer class="site-footer">
+        <p>&copy; 2026 Victor Hugo. Feito com HTML, CSS e JS puros.</p>
+      </footer>
+    </main>
+  </div>
+
+  <div id="success-modal" class="modal-overlay">
+    <div class="modal-card">
+      <svg class="modal-icon" viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="2.5">
+        <circle cx="50" cy="50" r="40" stroke-opacity="0.2"/>
+        <path d="M30 50 L45 65 L70 35" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+      <h3 class="modal-title">Mensagem Enviada</h3>
+      <p class="modal-text">
+        Obrigado pelo contato! Seus dados foram validados e a mensagem foi simulada com sucesso no sistema. 
+        Retornaremos em breve.
+      </p>
+      <button id="modal-close-btn" class="modal-close-btn">Fechar</button>
+    </div>
+  </div>
+
+  <script src="js/app.js"></script>
+  <script src="js/contato.js"></script>
+</body>
+</html>
