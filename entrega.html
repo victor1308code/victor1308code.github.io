@@ -1,0 +1,1959 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Trabalho Prático - Fundamentos da Programação Web</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      color: #333;
+      margin: 40px;
+    }
+    h1 {
+      font-size: 22px;
+      border-bottom: 2px solid #0056b3;
+      padding-bottom: 10px;
+      color: #0056b3;
+    }
+    h2 {
+      font-size: 16px;
+      margin-top: 30px;
+      color: #333;
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 5px;
+    }
+    h3 {
+      font-size: 14px;
+      color: #555;
+    }
+    .info-box {
+      background-color: #f8f9fa;
+      border: 1px solid #e9ecef;
+      padding: 20px;
+      margin-bottom: 25px;
+      border-radius: 4px;
+    }
+    .info-box p {
+      margin: 8px 0;
+    }
+    .info-box strong {
+      color: #0056b3;
+    }
+    pre {
+      background-color: #f1f3f5;
+      border: 1px solid #dee2e6;
+      padding: 15px;
+      font-family: 'Courier New', Courier, monospace;
+      font-size: 11px;
+      overflow-x: auto;
+      white-space: pre-wrap;
+      word-wrap: break-word;
+      max-height: 500px;
+      border-radius: 4px;
+    }
+    .print-placeholder {
+      border: 2px dashed #adb5bd;
+      background-color: #f8f9fa;
+      padding: 40px 20px;
+      text-align: center;
+      margin: 20px 0;
+      color: #6c757d;
+      border-radius: 4px;
+      font-size: 13px;
+    }
+    .alert-banner {
+      background-color: #e2f0d9;
+      border: 1px solid #a9d18e;
+      color: #385723;
+      padding: 15px;
+      margin-bottom: 30px;
+      border-radius: 4px;
+      font-size: 13px;
+    }
+    @media print {
+      body {
+        margin: 20px;
+        font-size: 12px;
+      }
+      .alert-banner {
+        display: none;
+      }
+      pre {
+        max-height: none;
+        page-break-inside: avoid;
+      }
+      .print-placeholder {
+        page-break-inside: avoid;
+        height: 250px;
+      }
+      h1, h2, h3 {
+        page-break-after: avoid;
+      }
+      .page-break {
+        page-break-before: always;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="alert-banner">
+    <strong>Instruções para salvar como PDF:</strong><br>
+    1. Abra este arquivo no seu navegador (Google Chrome, Safari, etc.).<br>
+    2. Tire prints de cada tela do seu site publicado na internet (com a URL <em>https://victor1308code.github.io/</em> visível).<br>
+    3. Cole as imagens nos locais indicados se for editar este arquivo, ou imprima o PDF e junte as capturas de tela.<br>
+    4. Pressione <strong>Ctrl + P</strong> (ou <strong>Cmd + P</strong> no Mac).<br>
+    5. Escolha a impressora <strong>"Salvar como PDF"</strong> e clique em Salvar!
+  </div>
+
+  <header>
+    <h1>Fundamentos da Programação Web — Atividade Prática</h1>
+  </header>
+
+  <div class="info-box">
+    <p><strong>Curso:</strong> Análise e Desenvolvimento de Sistemas</p>
+    <p><strong>Estudante:</strong> Victor Hugo Costa Silva De Oliveira</p>
+    <p><strong>Disciplina:</strong> Fundamentos da Programação Web</p>
+    <p><strong>Link da Hospedagem (GitHub Pages):</strong> <a href="https://victor1308code.github.io/" target="_blank">https://victor1308code.github.io/</a></p>
+    <p><strong>Link do Repositório (GitHub):</strong> <a href="https://github.com/victor1308code/victor1308code.github.io" target="_blank">https://github.com/victor1308code/victor1308code.github.io</a></p>
+  </div>
+
+  <section class="page-break">
+    <h1>1. Capturas de Tela (Prints do Navegador)</h1>
+    <p>As seções abaixo indicam onde colar os prints de tela do site em funcionamento na hospedagem oficial (com o link visível na barra de endereços).</p>
+
+    <h2>Print 1.1 — Página Sobre Mim (sobre.html)</h2>
+    <div class="print-placeholder">
+      [Cole aqui o print da página Sobre Mim aberta no navegador na URL: https://victor1308code.github.io/sobre.html]
+    </div>
+
+    <h2>Print 1.2 — Página Formação (formacao.html)</h2>
+    <div class="print-placeholder">
+      [Cole aqui o print da página de Formação aberta no navegador na URL: https://victor1308code.github.io/formacao.html]
+    </div>
+
+    <h2>Print 1.3 — Página Portfólio (portfolio.html)</h2>
+    <div class="print-placeholder">
+      [Cole aqui o print da página de Portfólio aberta no navegador na URL: https://victor1308code.github.io/portfolio.html]
+    </div>
+
+    <h2>Print 1.4 — Página Contato (contato.html)</h2>
+    <div class="print-placeholder">
+      [Cole aqui o print da página de Contato aberta no navegador na URL: https://victor1308code.github.io/contato.html]
+    </div>
+
+    <h2>Print 1.5 — Validação de Formulário e Modal de Confirmação</h2>
+    <div class="print-placeholder">
+      [Cole aqui o print da tela mostrando o preenchimento do formulário, validação ou o Modal de sucesso de envio]
+    </div>
+  </section>
+
+  <section class="page-break">
+    <h1>2. Código Fonte Completo do Projeto</h1>
+    <p>Abaixo estão copiados e colados na íntegra todos os arquivos de código criados para o projeto do portfólio.</p>
+
+    <h2>Arquivo: index.html</h2>
+    <pre>&lt;!DOCTYPE html&gt;
+&lt;html lang="pt-BR"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta http-equiv="refresh" content="0; url=sobre.html"&gt;
+    &lt;title&gt;Victor Oliveira - Portfólio&lt;/title&gt;
+    &lt;script type="text/javascript"&gt;
+        window.location.href = "sobre.html";
+    &lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;p&gt;Redirecionando para &lt;a href="sobre.html"&gt;sobre.html&lt;/a&gt;...&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;</pre>
+
+    <h2>Arquivo: sobre.html</h2>
+    <pre>&lt;!DOCTYPE html&gt;
+&lt;html lang="pt-BR" class="theme-light font-sans"&gt;
+&lt;head&gt;
+  &lt;meta charset="UTF-8"&gt;
+  &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+  &lt;title&gt;Sobre Mim — Victor Hugo Oliveira&lt;/title&gt;
+  &lt;meta name="description" content="Portfólio pessoal e acadêmico de Victor Hugo Costa Silva De Oliveira. Conheça meu perfil, habilidades, formação e experiências."&gt;
+  &lt;link rel="stylesheet" href="css/style.css"&gt;
+&lt;/head&gt;
+&lt;body class="theme-light font-sans"&gt;
+
+  &lt;canvas id="canvas-bg"&gt;&lt;/canvas&gt;
+
+  &lt;div class="site-frame"&gt;
+    &lt;div class="frame-line frame-top"&gt;&lt;/div&gt;
+    &lt;div class="frame-line frame-right"&gt;&lt;/div&gt;
+    &lt;div class="frame-line frame-bottom"&gt;&lt;/div&gt;
+    &lt;div class="frame-line frame-left"&gt;&lt;/div&gt;
+  &lt;/div&gt;
+
+  &lt;div class="app-container"&gt;
+    &lt;header class="site-header"&gt;
+      &lt;div class="header-top"&gt;
+        &lt;h1 class="site-title"&gt;Victor Hugo&lt;/h1&gt;
+        &lt;p class="site-subtitle"&gt;Assessor de TIC &amp; Estudante de ADS&lt;/p&gt;
+        
+        &lt;nav class="nav-menu"&gt;
+          &lt;ul class="nav-list"&gt;
+            &lt;li class="nav-item active"&gt;
+              &lt;span class="nav-dot"&gt;&lt;/span&gt;
+              &lt;a href="sobre.html" class="nav-link"&gt;Sobre mim&lt;/a&gt;
+            &lt;/li&gt;
+            &lt;li class="nav-item"&gt;
+              &lt;span class="nav-dot"&gt;&lt;/span&gt;
+              &lt;a href="formacao.html" class="nav-link"&gt;Formação&lt;/a&gt;
+            &lt;/li&gt;
+            &lt;li class="nav-item"&gt;
+              &lt;span class="nav-dot"&gt;&lt;/span&gt;
+              &lt;a href="portfolio.html" class="nav-link"&gt;Portfólio&lt;/a&gt;
+            &lt;/li&gt;
+            &lt;li class="nav-item"&gt;
+              &lt;span class="nav-dot"&gt;&lt;/span&gt;
+              &lt;a href="contato.html" class="nav-link"&gt;Contato&lt;/a&gt;
+            &lt;/li&gt;
+          &lt;/ul&gt;
+        &lt;/nav&gt;
+      </div>
+
+      &lt;div class="style-controls"&gt;
+        &lt;div class="control-group"&gt;
+          &lt;span class="control-label"&gt;Tema&lt;/span&gt;
+          &lt;div class="control-buttons"&gt;
+            &lt;button id="theme-light" class="btn-toggle active"&gt;Claro&lt;/button&gt;
+            &lt;button id="theme-dark" class="btn-toggle"&gt;Escuro&lt;/button&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+        
+        &lt;div class="control-group"&gt;
+          &lt;span class="control-label"&gt;Tipografia&lt;/span&gt;
+          &lt;div class="control-buttons"&gt;
+            &lt;button id="font-sans-btn" class="btn-toggle active"&gt;Sans&lt;/button&gt;
+            &lt;button id="font-mono-btn" class="btn-toggle"&gt;Mono&lt;/button&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/header&gt;
+
+    &lt;main class="main-content"&gt;
+      &lt;section id="sobre"&gt;
+        &lt;h2 class="section-title"&gt;Sobre Mim&lt;/h2&gt;
+        
+        &lt;div class="intro-text"&gt;
+          &lt;p&gt;
+            Olá! Sou &lt;strong&gt;Victor Hugo Costa Silva De Oliveira&lt;/strong&gt;. 
+            Atuo como &lt;strong&gt;Assessor de TIC&lt;/strong&gt; em órgão público e sou graduando em &lt;strong&gt;Análise e Desenvolvimento de Sistemas&lt;/strong&gt;. 
+            Combino experiência prática em suporte técnico corporativo e desenvolvimento frontend (Angular) com estudo constante 
+            dos modernos conceitos de arquitetura de software para entregar soluções eficientes e de alta performance.
+          &lt;/p&gt;
+        &lt;/div&gt;
+
+        &lt;div class="info-grid"&gt;
+          &lt;div class="info-block"&gt;
+            &lt;h3 class="info-label"&gt;Perfil Profissional&lt;/h3&gt;
+            &lt;p class="info-value"&gt;
+              Experiência com infraestrutura e suporte de tecnologia na SEAC-DF, alinhando soluções tecnológicas 
+              aos objetivos organizacionais. Desenvolvedor web freelancer focado em soluções frontend responsivas e otimização de interfaces.
+            &lt;/p&gt;
+          &lt;/div>
+
+          &lt;div class="info-block"&gt;
+            &lt;h3 class="info-label"&gt;Comunicação &amp; Idiomas&lt;/h3&gt;
+            &lt;p class="info-value"&gt;
+              Inglês avançado e facilidade de comunicação técnica corporativa. Capacidade analítica para identificar pontos críticos, 
+              gerenciar demandas de usuários e resolver problemas de hardware e software sob pressão.
+            &lt;/p&gt;
+          &lt;/div&gt;
+
+          &lt;div class="info-block"&gt;
+            &lt;h3 class="info-label"&gt;Principais Competências&lt;/h3&gt;
+            &lt;p class="info-value"&gt;
+              SQL e PostgreSQL &amp;bull; Desenvolvimento Web (Angular 19) &amp;bull; Java e JDBC &amp;bull; 
+              Suporte Técnico corporativo &amp;bull; Segurança da Informação &amp;bull; Redes e Configuração de TI.
+            &lt;/p&gt;
+          &lt;/div&gt;
+
+          &lt;div class="info-block"&gt;
+            &lt;h3 class="info-label"&gt;Contato Direto&lt;/h3&gt;
+            &lt;p class="info-value"&gt;
+              &lt;strong&gt;Email:&lt;/strong&gt victor1308pro@gmail.com&lt;br&gt;
+              &lt;strong&gt;Telefone:&lt;/strong&gt; (61) 98127-9861&lt;br&gt;
+              &lt;strong&gt;Localidade:&lt;/strong&gt; Distrito Federal, Brasil
+            &lt;/p&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+
+        &lt;div style="margin-top: 40px; display: flex; gap: 15px; flex-wrap: wrap;"&gt;
+          &lt;a href="curriculo.pdf" download="Curriculo_Victor_Hugo.pdf" class="btn-action"&gt;Baixar Currículo (PDF)&lt;/a&gt;
+          &lt;a href="https://github.com/victor1308code" target="_blank" rel="noopener" class="btn-action"&gt;GitHub&lt;/a&gt;
+          &lt;a href="https://linkedin.com/in/victoroliveira1308" target="_blank" rel="noopener" class="btn-action"&gt;LinkedIn&lt;/a&gt;
+        &lt;/div&gt;
+      &lt;/section&gt;
+
+      &lt;footer class="site-footer"&gt;
+        &lt;p&gt;&amp;copy; 2026 Victor Hugo. Feito com HTML, CSS e JS puros.&lt;/p&gt;
+      &lt;/footer&gt;
+    &lt;/main&gt;
+  </div>
+
+  &lt;script src="js/app.js"&gt;&lt;/script&gt;
+</body>
+</html></pre>
+
+    <h2 class="page-break">Arquivo: formacao.html</h2>
+    <pre>&lt;!DOCTYPE html&gt;
+&lt;html lang="pt-BR" class="theme-light font-sans"&gt;
+&lt;head&gt;
+  &lt;meta charset="UTF-8"&gt;
+  &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+  &lt;title>Formação &amp; Carreira — Victor Hugo Oliveira&lt;/title&gt;
+  &lt;meta name="description" content="Histórico acadêmico, experiências profissionais, certificações e idiomas de Victor Hugo Costa Silva De Oliveira."&gt;
+  &lt;link rel="stylesheet" href="css/style.css"&gt;
+&lt;/head&gt;
+&lt;body class="theme-light font-sans"&gt;
+
+  &lt;canvas id="canvas-bg"&gt;&lt;/canvas&gt;
+
+  &lt;div class="site-frame"&gt;
+    &lt;div class="frame-line frame-top"&gt;&lt;/div&gt;
+    &lt;div class="frame-line frame-right"&gt;&lt;/div&gt;
+    &lt;div class="frame-line frame-bottom"&gt;&lt;/div&gt;
+    &lt;div class="frame-line frame-left"&gt;&lt;/div&gt;
+  &lt;/div&gt;
+
+  &lt;div class="app-container"&gt;
+    &lt;header class="site-header"&gt;
+      &lt;div class="header-top"&gt;
+        &lt;h1 class="site-title"&gt;Victor Hugo&lt;/h1&gt;
+        &lt;p class="site-subtitle"&gt;Assessor de TIC &amp; Estudante de ADS&lt;/p&gt;
+        
+        &lt;nav class="nav-menu"&gt;
+          &lt;ul class="nav-list"&gt;
+            &lt;li class="nav-item"&gt;
+              &lt;span class="nav-dot"&gt;&lt;/span&gt;
+              &lt;a href="sobre.html" class="nav-link"&gt;Sobre mim&lt;/a&gt;
+            &lt;/li&gt;
+            &lt;li class="nav-item active"&gt;
+              &lt;span class="nav-dot"&gt;&lt;/span&gt;
+              &lt;a href="formacao.html" class="nav-link"&gt;Formação&lt;/a&gt;
+            &lt;/li&gt;
+            &lt;li class="nav-item"&gt;
+              &lt;span class="nav-dot"&gt;&lt;/span&gt;
+              &lt;a href="portfolio.html" class="nav-link"&gt;Portfólio&lt;/a&gt;
+            &lt;/li&gt;
+            &lt;li class="nav-item"&gt;
+              &lt;span class="nav-dot"&gt;&lt;/span&gt;
+              &lt;a href="contato.html" class="nav-link"&gt;Contato&lt;/a&gt;
+            &lt;/li&gt;
+          &lt;/ul&gt;
+        &lt;/nav&gt;
+      </div>
+
+      &lt;div class="style-controls"&gt;
+        &lt;div class="control-group"&gt;
+          &lt;span class="control-label"&gt;Tema&lt;/span&gt;
+          &lt;div class="control-buttons"&gt;
+            &lt;button id="theme-light" class="btn-toggle active"&gt;Claro&lt;/button&gt;
+            &lt;button id="theme-dark" class="btn-toggle"&gt;Escuro&lt;/button&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+        
+        &lt;div class="control-group"&gt;
+          &lt;span class="control-label"&gt;Tipografia&lt;/span&gt;
+          &lt;div class="control-buttons"&gt;
+            &lt;button id="font-sans-btn" class="btn-toggle active"&gt;Sans&lt;/button&gt;
+            &lt;button id="font-mono-btn" class="btn-toggle"&gt;Mono&lt;/button&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/header&gt;
+
+    &lt;main class="main-content"&gt;
+      &lt;section id="formacao"&gt;
+        &lt;h2 class="section-title"&gt;Formação &amp; Experiência&lt;/h2&gt;
+
+        &lt;div class="info-grid"&gt;
+          &lt;div class="info-block"&gt;
+            &lt;h3 class="info-label" style="margin-bottom: 20px;"&gt;Trajetória Profissional&lt;/h3&gt;
+            
+            &lt;div class="timeline"&gt;
+              &lt;div class="timeline-item"&gt;
+                &lt;span class="timeline-marker"&gt;&lt;/span&gt;
+                &lt;span class="timeline-date"&gt;04/2026 &amp;mdash; Atual&lt;/span&gt;
+                &lt;h4 class="timeline-title"&gt;Assessor de TI e Comunicação&lt;/h4&gt;
+                &lt;p class="timeline-institution"&gt;Secretaria de Atendimento à Comunidade (SEAC-DF)&lt;/p&gt;
+                &lt;p class="timeline-desc"&gt;
+                  Avaliação de estratégias tecnológicas alinhadas aos objetivos do órgão, acompanhamento de projetos 
+                  e suporte técnico de hardware, redes e sistemas corporativos internos para os colaboradores.
+                &lt;/p&gt;
+              </div>
+
+              &lt;div class="timeline-item"&gt;
+                &lt;span class="timeline-marker"&gt;&lt;/span&gt;
+                &lt;span class="timeline-date"&gt;08/2023 &amp;mdash; 08/2024&lt;/span&gt;
+                &lt;h4 class="timeline-title"&gt;Desenvolvedor Web (Freelancer)&lt;/h4&gt;
+                &lt;p class="timeline-institution"&gt;Projeto Autônomo&lt;/p&gt;
+                &lt;p class="timeline-desc"&gt;
+                  Desenvolvimento completo do frontend de um sistema web para agendamento de barbearia utilizando Angular, 
+                  focado em design responsivo, usabilidade e integração de interfaces.
+                </p>
+              </div>
+
+              &lt;div class="timeline-item"&gt;
+                &lt;span class="timeline-marker"&gt;&lt;/span&gt;
+                &lt;span class="timeline-date"&gt;2015 &amp;mdash; 2021&lt;/span&gt;
+                &lt;h4 class="timeline-title"&gt;Estagiário Técnico e Administrativo&lt;/h4&gt;
+                &lt;p class="timeline-institution"&gt;CFC (2019-2021) &amp;bull; TJDFT (2015-2017)&lt;/p&gt;
+                &lt;p class="timeline-desc"&gt;
+                  Atuação em suporte técnico administrativo e de informática. Suporte de hardware e sistemas corporativos, 
+                  manutenção e preservação de documentos digitais e atendimento ao público corporativo.
+                &lt;/p&gt;
+              </div>
+            </div>
+          </div>
+
+          &lt;div class="info-block"&gt;
+            &lt;h3 class="info-label" style="margin-bottom: 20px;"&gt;Formação Acadêmica&lt;/h3&gt;
+            
+            &lt;div class="timeline" style="margin-bottom: 35px;"&gt;
+              &lt;div class="timeline-item"&gt;
+                &lt;span class="timeline-marker"&gt;&lt;/span&gt;
+                &lt;span class="timeline-date"&gt;2025 &amp;mdash; 12/2026 (Previsão)&lt;/span&gt;
+                &lt;h4 class="timeline-title"&gt;Análise e Desenvolvimento de Sistemas&lt;/h4&gt;
+                &lt;p class="timeline-institution"&gt;Centro Universitário Internacional (UNINTER)&lt;/p&gt;
+                &lt;p class="timeline-desc"&gt;
+                  Graduação tecnológica focada no ciclo de desenvolvimento de software, estrutura de dados, 
+                  bancos de dados relacionais e modernos conceitos de desenvolvimento frontend/backend.
+                </p>
+              </div>
+            </div>
+
+            &lt;h3 class="info-label" style="margin-bottom: 20px;"&gt;Certificações &amp; Cursos&lt;/h3&gt;
+            &lt;ul class="course-list" style="margin-bottom: 35px;"&gt;
+              &lt;li class="course-item"&gt;
+                &lt;div class="course-info"&gt;
+                  &lt;span class="course-title"&gt;Angular 19 &amp; Java/JDBC&lt;/span&gt;
+                  &lt;span class="course-platform"&gt;Alura&lt;/span&gt;
+                </div>
+                &lt;span class="course-hours"&gt;Certificado &amp;bull; 2025&lt;/span&gt;
+              </li>
+              &lt;li class="course-item"&gt;
+                &lt;div class="course-info"&gt;
+                  &lt;span class="course-title"&gt;SQL com PostgreSQL&lt;/span&gt;
+                  &lt;span class="course-platform"&gt;Alura&lt;/span&gt;
+                </div>
+                &lt;span class="course-hours"&gt;Certificado &amp;bull; 2025&lt;/span&gt;
+              </li>
+              &lt;li class="course-item"&gt;
+                &lt;div class="course-info"&gt;
+                  &lt;span class="course-title"&gt;The Complete Web Development Bootcamp&lt;/span&gt;
+                  &lt;span class="course-platform"&gt;Udemy&lt;/span&gt;
+                </div>
+                &lt;span class="course-hours"&gt;Certificado &amp;bull; 2024&lt;/span&gt;
+              </li>
+              &lt;li class="course-item"&gt;
+                &lt;div class="course-info"&gt;
+                  &lt;span class="course-title"&gt;Segurança em TI &amp; Office Avançado&lt;/span&gt;
+                  &lt;span class="course-platform"&gt;Fundação Bradesco&lt;/span&gt;
+                </div>
+                &lt;span class="course-hours"&gt;Certificado &amp;bull; 2024&lt;/span&gt;
+              </li>
+            &lt;/ul&gt;
+
+            &lt;h3 class="info-label" style="margin-bottom: 20px;"&gt;Idiomas&lt;/h3&gt;
+            &lt;div class="tag-container"&gt;
+              &lt;span class="tag-pill"&gt;Português (Nativo)&lt;/span&gt;
+              &lt;span class="tag-pill"&gt;Inglês (Avançado / Bilíngue)&lt;/span&gt;
+              &lt;span class="tag-pill"&gt;Espanhol (Básico)&lt;/span&gt;
+            </div>
+          </div>
+        </div>
+      &lt;/section&gt;
+
+      &lt;footer class="site-footer"&gt;
+        &lt;p&gt;&amp;copy; 2026 Victor Hugo. Feito com HTML, CSS e JS puros.&lt;/p&gt;
+      &lt;/footer&gt;
+    &lt;/main&gt;
+  </div>
+
+  &lt;script src="js/app.js"&gt;&lt;/script&gt;
+</body>
+</html></pre>
+
+    <h2 class="page-break">Arquivo: portfolio.html</h2>
+    <pre>&lt;!DOCTYPE html&gt;
+&lt;html lang="pt-BR" class="theme-light font-sans"&gt;
+&lt;head&gt;
+  &lt;meta charset="UTF-8"&gt;
+  &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+  &lt;title&gt;Portfólio — Victor Hugo Oliveira&lt;/title&gt;
+  &lt;meta name="description" content="Projetos de desenvolvimento web e experimentos de software criados por Victor Hugo Costa Silva De Oliveira."&gt;
+  &lt;link rel="stylesheet" href="css/style.css"&gt;
+&lt;/head&gt;
+&lt;body class="theme-light font-sans"&gt;
+
+  &lt;canvas id="canvas-bg"&gt;&lt;/canvas&gt;
+
+  &lt;div class="site-frame"&gt;
+    &lt;div class="frame-line frame-top"&gt;&lt;/div&gt;
+    &lt;div class="frame-line frame-right"&gt;&lt;/div&gt;
+    &lt;div class="frame-line frame-bottom"&gt;&lt;/div&gt;
+    &lt;div class="frame-line frame-left"&gt;&lt;/div&gt;
+  &lt;/div&gt;
+
+  &lt;div class="app-container"&gt;
+    &lt;header class="site-header"&gt;
+      &lt;div class="header-top"&gt;
+        &lt;h1 class="site-title"&gt;Victor Hugo&lt;/h1&gt;
+        &lt;p class="site-subtitle"&gt;Assessor de TIC &amp; Estudante de ADS&lt;/p&gt;
+        
+        &lt;nav class="nav-menu"&gt;
+          &lt;ul class="nav-list"&gt;
+            &lt;li class="nav-item"&gt;
+              &lt;span class="nav-dot"&gt;&lt;/span&gt;
+              &lt;a href="sobre.html" class="nav-link"&gt;Sobre mim&lt;/a&gt;
+            &lt;/li&gt;
+            &lt;li class="nav-item"&gt;
+              &lt;span class="nav-dot"&gt;&lt;/span&gt;
+              &lt;a href="formacao.html" class="nav-link"&gt;Formação&lt;/a&gt;
+            &lt;/li&gt;
+            &lt;li class="nav-item active"&gt;
+              &lt;span class="nav-dot"&gt;&lt;/span&gt;
+              &lt;a href="portfolio.html" class="nav-link"&gt;Portfólio&lt;/a&gt;
+            &lt;/li&gt;
+            &lt;li class="nav-item"&gt;
+              &lt;span class="nav-dot"&gt;&lt;/span&gt;
+              &lt;a href="contato.html" class="nav-link"&gt;Contato&lt;/a&gt;
+            &lt;/li&gt;
+          &lt;/ul&gt;
+        &lt;/nav&gt;
+      </div>
+
+      &lt;div class="style-controls"&gt;
+        &lt;div class="control-group"&gt;
+          &lt;span class="control-label"&gt;Tema&lt;/span&gt;
+          &lt;div class="control-buttons"&gt;
+            &lt;button id="theme-light" class="btn-toggle active"&gt;Claro&lt;/button&gt;
+            &lt;button id="theme-dark" class="btn-toggle"&gt;Escuro&lt;/button&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+        
+        &lt;div class="control-group"&gt;
+          &lt;span class="control-label"&gt;Tipografia&lt;/span&gt;
+          &lt;div class="control-buttons"&gt;
+            &lt;button id="font-sans-btn" class="btn-toggle active"&gt;Sans&lt;/button&gt;
+            &lt;button id="font-mono-btn" class="btn-toggle"&gt;Mono&lt;/button&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/header&gt;
+
+    &lt;main class="main-content"&gt;
+      &lt;section id="portfolio"&gt;
+        &lt;h2 class="section-title"&gt;Portfólio&lt;/h2>
+        
+        &lt;div class="intro-text" style="margin-bottom: 30px;"&gt;
+          &lt;p&gt;
+            Uma amostra dos meus projetos de desenvolvimento de software. 
+            Utilizo ferramentas modernas como Angular e Java, focando em arquitetura organizada 
+            e usabilidade responsiva.
+          </p>
+        &lt;/div&gt;
+
+        &lt;div class="portfolio-grid"&gt;
+          &lt;article class="portfolio-card"&gt;
+            &lt;div class="portfolio-preview"&gt;
+              &lt;svg viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="2"&gt;
+                &lt;rect x="25" y="20" width="50" height="15" rx="2" fill="currentColor" fill-opacity="0.1"/&gt;
+                &lt;rect x="25" y="42" width="50" height="15" rx="2" fill="currentColor" fill-opacity="0.2"/&gt;
+                &lt;rect x="25" y="65" width="50" height="15" rx="2" fill="currentColor" fill-opacity="0.3"/&gt;
+                &lt;circle cx="35" cy="275" r="2" transform="translate(0, -247)" fill="currentColor"/&gt;
+                &lt;circle cx="35" cy="49" r="2" fill="currentColor"/&gt;
+                &lt;circle cx="35" cy="72" r="2" fill="currentColor"/&gt;
+                &lt;line x1="45" y1="27" x2="68" y2="27" stroke-dasharray="2 1"/&gt;
+                &lt;line x1="45" y1="49" x2="68" y2="49" stroke-dasharray="2 1"/&gt;
+                &lt;line x1="45" y1="72" x2="68" y2="72" stroke-dasharray="2 1"/&gt;
+              &lt;/svg&gt;
+            </div>
+            &lt;div class="portfolio-info"&gt;
+              &lt;div class="portfolio-title-wrapper"&gt;
+                &lt;h3 class="portfolio-title"&gt;trabalho-backend&lt;/h3&gt;
+                &lt;span class="portfolio-year"&gt;2025&lt;/span&gt;
+              </div>
+              &lt;p class="portfolio-desc"&gt;
+                Repositório oficial contendo o trabalho de Desenvolvimento Web Backend. Implementação de uma API de controle de 
+                tarefas robusta utilizando linguagem Java.
+              </p>
+              &lt;div class="portfolio-tech tag-container"&gt;
+                &lt;span class="tag-pill"&gt;Java&lt;/span&gt;
+                &lt;span class="tag-pill"&gt;Backend&lt;/span&gt;
+                &lt;span class="tag-pill"&gt;JDBC&lt;/span&gt;
+              &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class="portfolio-actions"&gt;
+              &lt;a href="https://github.com/victor1308code/trabalho-backend" target="_blank" rel="noopener" class="portfolio-btn"&gt;Código&lt;/a&gt;
+              &lt;span class="portfolio-btn" style="opacity: 0.5; cursor: not-allowed;"&gt;Demo&lt;/span&gt;
+            &lt;/div&gt;
+          &lt;/article&gt;
+
+          &lt;article class="portfolio-card"&gt;
+            &lt;div class="portfolio-preview"&gt;
+              &lt;svg viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="2"&gt;
+                &lt;circle cx="42" cy="42" r="22" fill="currentColor" fill-opacity="0.1"/&gt;
+                &lt;circle cx="58" cy="42" r="22" fill="currentColor" fill-opacity="0.2"/&gt;
+                &lt;circle cx="50" cy="58" r="22" fill="currentColor" fill-opacity="0.3"/&gt;
+              &lt;/svg&gt;
+            </div>
+            &lt;div class="portfolio-info"&gt;
+              &lt;div class="portfolio-title-wrapper"&gt;
+                &lt;h3 class="portfolio-title"&gt;raizes-do-nordeste-backend&lt;/h3&gt;
+                &lt;span class="portfolio-year"&gt;2026&lt;/span&gt;
+              </div>
+              &lt;p class="portfolio-desc"&gt;
+                Camada de backend desenvolvida para o projeto Raízes do Nordeste. Estruturação das rotas de serviço e regras de 
+                negócio utilizando linguagem Java e dependências Maven.
+              </p>
+              &lt;div class="portfolio-tech tag-container"&gt;
+                &lt;span class="tag-pill"&gt;Java&lt;/span&gt;
+                &lt;span class="tag-pill"&gt;Maven&lt;/span&gt;
+                &lt;span class="tag-pill"&gt;Backend&lt;/span&gt;
+              &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class="portfolio-actions"&gt;
+              &lt;a href="https://github.com/victor1308code/raizes-do-nordeste-backend" target="_blank" rel="noopener" class="portfolio-btn"&gt;Código&lt;/a&gt;
+              &lt;span class="portfolio-btn" style="opacity: 0.5; cursor: not-allowed;"&gt;Demo&lt;/span&gt;
+            &lt;/div&gt;
+          &lt;/article&gt;
+        &lt;/div&gt;
+      &lt;/section&gt;
+
+      &lt;footer class="site-footer"&gt;
+        &lt;p&gt;&amp;copy; 2026 Victor Hugo. Feito com HTML, CSS e JS puros.&lt;/p&gt;
+      &lt;/footer&gt;
+    &lt;/main&gt;
+  </div>
+
+  &lt;script src="js/app.js"&gt;&lt;/script&gt;
+</body>
+</html></pre>
+
+    <h2 class="page-break">Arquivo: contato.html</h2>
+    <pre>&lt;!DOCTYPE html&gt;
+&lt;html lang="pt-BR" class="theme-light font-sans"&gt;
+&lt;head&gt;
+  &lt;meta charset="UTF-8"&gt;
+  &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+  &lt;title&gt;Contato — Victor Hugo Oliveira&lt;/title&gt;
+  &lt;meta name="description" content="Entre em contato com Victor Hugo Costa Silva De Oliveira. Envie uma mensagem diretamente pelo formulário."&gt;
+  &lt;link rel="stylesheet" href="css/style.css"&gt;
+&lt;/head&gt;
+&lt;body class="theme-light font-sans"&gt;
+
+  &lt;canvas id="canvas-bg"&gt;&lt;/canvas&gt;
+
+  &lt;div class="site-frame"&gt;
+    &lt;div class="frame-line frame-top"&gt;&lt;/div&gt;
+    &lt;div class="frame-line frame-right"&gt;&lt;/div&gt;
+    &lt;div class="frame-line frame-bottom"&gt;&lt;/div&gt;
+    &lt;div class="frame-line frame-left"&gt;&lt;/div&gt;
+  &lt;/div&gt;
+
+  &lt;div class="app-container"&gt;
+    &lt;header class="site-header"&gt;
+      &lt;div class="header-top"&gt;
+        &lt;h1 class="site-title"&gt;Victor Hugo&lt;/h1&gt;
+        &lt;p class="site-subtitle"&gt;Assessor de TIC &amp; Estudante de ADS&lt;/p&gt;
+        
+        &lt;nav class="nav-menu"&gt;
+          &lt;ul class="nav-list"&gt;
+            &lt;li class="nav-item"&gt;
+              &lt;span class="nav-dot"&gt;&lt;/span&gt;
+              &lt;a href="sobre.html" class="nav-link"&gt;Sobre mim&lt;/a&gt;
+            &lt;/li&gt;
+            &lt;li class="nav-item"&gt;
+              &lt;span class="nav-dot"&gt;&lt;/span&gt;
+              &lt;a href="formacao.html" class="nav-link"&gt;Formação&lt;/a&gt;
+            &lt;/li&gt;
+            &lt;li class="nav-item"&gt;
+              &lt;span class="nav-dot"&gt;&lt;/span&gt;
+              &lt;a href="portfolio.html" class="nav-link"&gt;Portfólio&lt;/a&gt;
+            &lt;/li&gt;
+            &lt;li class="nav-item active"&gt;
+              &lt;span class="nav-dot"&gt;&lt;/span&gt;
+              &lt;a href="contato.html" class="nav-link"&gt;Contato&lt;/a&gt;
+            &lt;/li&gt;
+          &lt;/ul&gt;
+        &lt;/nav&gt;
+      </div>
+
+      &lt;div class="style-controls"&gt;
+        &lt;div class="control-group"&gt;
+          &lt;span class="control-label"&gt;Tema&lt;/span&gt;
+          &lt;div class="control-buttons"&gt;
+            &lt;button id="theme-light" class="btn-toggle active"&gt;Claro&lt;/button&gt;
+            &lt;button id="theme-dark" class="btn-toggle"&gt;Escuro&lt;/button&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+        
+        &lt;div class="control-group"&gt;
+          &lt;span class="control-label"&gt;Tipografia&lt;/span&gt;
+          &lt;div class="control-buttons"&gt;
+            &lt;button id="font-sans-btn" class="btn-toggle active"&gt;Sans&lt;/button&gt;
+            &lt;button id="font-mono-btn" class="btn-toggle"&gt;Mono&lt;/button&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/header&gt;
+
+    &lt;main class="main-content"&gt;
+      &lt;section id="contato"&gt;
+        &lt;h2 class="section-title"&gt;Contato&lt;/h2&gt;
+        
+        &lt;div class="intro-text" style="margin-bottom: 30px;"&gt;
+          &lt;p&gt;
+            Deseja falar sobre oportunidades, parcerias acadêmicas ou projetos de TI? 
+            Preencha o formulário abaixo ou envie uma mensagem diretamente para &lt;strong&gt;victor1308pro@gmail.com&lt;/strong&gt;.
+          </p>
+        </div>
+
+        &lt;form id="contact-form" class="contact-form" novalidate&gt;
+          &lt;div class="form-group"&gt;
+            &lt;label for="name" class="form-label"&gt;Nome Completo&lt;/label&gt;
+            &lt;input type="text" id="name" name="name" class="form-control" placeholder="Seu nome"&gt;
+            &lt;span class="error-message"&gt;Erro&lt;/span&gt;
+          &lt;/div&gt;
+
+          &lt;div class="form-group"&gt;
+            &lt;label for="email" class="form-label"&gt;E-mail&lt;/label&gt;
+            &lt;input type="email" id="email" name="email" class="form-control" placeholder="seu-email@dominio.com"&gt;
+            &lt;span class="error-message"&gt;Erro&lt;/span&gt;
+          &lt;/div&gt;
+
+          &lt;div class="form-group"&gt;
+            &lt;label for="message" class="form-label"&gt;Mensagem&lt;/label&gt;
+            &lt;textarea id="message" name="message" class="form-control form-textarea" placeholder="Escreva sua mensagem aqui..."&gt;&lt;/textarea&gt;
+            &lt;span class="error-message"&gt;Erro&lt;/span&gt;
+          &lt;/div&gt;
+
+          &lt;button type="submit" class="btn-submit"&gt;Enviar Mensagem&lt;/button&gt;
+        </form>
+      &lt;/section&gt;
+
+      &lt;footer class="site-footer"&gt;
+        &lt;p&gt;&amp;copy; 2026 Victor Hugo. Feito com HTML, CSS e JS puros.&lt;/p&gt;
+      &lt;/footer&gt;
+    &lt;/main&gt;
+  </div>
+
+  &lt;div id="success-modal" class="modal-overlay"&gt;
+    &lt;div class="modal-card"&gt;
+      &lt;svg class="modal-icon" viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="2.5"&gt;
+        &lt;circle cx="50" cy="50" r="40" stroke-opacity="0.2"/&gt;
+        &lt;path d="M30 50 L45 65 L70 35" stroke-linecap="round" stroke-linejoin="round"/&gt;
+      &lt;/svg&gt;
+      &lt;h3 class="modal-title"&gt;Mensagem Enviada&lt;/h3&gt;
+      &lt;p class="modal-text"&gt;
+        Obrigado pelo contato! Seus dados foram validados e a mensagem foi simulada com sucesso no sistema. 
+        Retornaremos em breve.
+      &lt;/p&gt;
+      &lt;button id="modal-close-btn" class="modal-close-btn"&gt;Fechar&lt;/button&gt;
+    </div>
+  </div>
+
+  &lt;script src="js/app.js"&gt;&lt;/script&gt;
+  &lt;script src="js/contato.js"&gt;&lt;/script&gt;
+</body>
+</html></pre>
+
+    <h2 class="page-break">Arquivo: css/style.css</h2>
+    <pre>/* Fontes */
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@200;400;600;800&amp;family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&amp;display=swap');
+
+/* Reset e Variáveis */
+:root {
+  --font-sans: 'Outfit', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-mono: 'Space Mono', monospace;
+  --pad: max(20px, 4vmin);
+  --fs-text: 14px;
+  --border-width: 1px;
+  --transition-speed: 0.3s;
+  --transition-ease: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+/* Tema Claro */
+:root, html.theme-light, body.theme-light {
+  --c-bg: hsl(0, 0%, 92%);
+  --c-text: hsl(0, 0%, 10%);
+  --c-border: rgba(0, 0, 0, 0.15);
+  --c-border-active: hsl(0, 0%, 10%);
+  --c-accent: hsl(200, 80%, 40%);
+  --c-card-bg: rgba(255, 255, 255, 0.5);
+  --c-canvas-opacity: 0.08;
+}
+
+/* Tema Escuro */
+html.theme-dark, body.theme-dark {
+  --c-bg: hsl(0, 0%, 6%);
+  --c-text: hsl(0, 0%, 94%);
+  --c-border: rgba(255, 255, 255, 0.12);
+  --c-border-active: hsl(0, 0%, 94%);
+  --c-accent: hsl(190, 90%, 50%);
+  --c-card-bg: rgba(15, 15, 15, 0.6);
+  --c-canvas-opacity: 0.15;
+}
+
+/* Fontes Alternativas */
+html.font-sans, body.font-sans {
+  font-family: var(--font-sans);
+  font-weight: 400;
+  letter-spacing: 0.02em;
+}
+
+html.font-mono, body.font-mono {
+  font-family: var(--font-mono);
+  font-weight: 400;
+  letter-spacing: -0.01em;
+}
+
+/* Reset Geral */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+  background-color: var(--c-bg);
+  color: var(--c-text);
+  transition: background-color var(--transition-speed) var(--transition-ease), 
+              color var(--transition-speed) var(--transition-ease);
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  transition: color var(--transition-speed) var(--transition-ease),
+              opacity var(--transition-speed) var(--transition-ease);
+}
+
+button, input, textarea {
+  font-family: inherit;
+  font-size: inherit;
+  color: inherit;
+  background: none;
+  border: none;
+}
+
+/* Moldura (Frame) */
+.site-frame {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 1000;
+}
+
+.frame-line {
+  position: absolute;
+  background-color: var(--c-border);
+  transition: background-color var(--transition-speed) var(--transition-ease);
+}
+
+.frame-top    { top: var(--pad); left: var(--pad); right: var(--pad); height: var(--border-width); }
+.frame-bottom { bottom: var(--pad); left: var(--pad); right: var(--pad); height: var(--border-width); }
+.frame-left   { top: var(--pad); bottom: var(--pad); left: var(--pad); width: var(--border-width); }
+.frame-right  { top: var(--pad); bottom: var(--pad); right: var(--pad); width: var(--border-width); }
+
+/* Canvas de Fundo */
+#canvas-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  pointer-events: none;
+  opacity: var(--c-canvas-opacity);
+  transition: opacity var(--transition-speed) var(--transition-ease);
+}
+
+/* Layout */
+.app-container {
+  display: grid;
+  grid-template-columns: 320px 1fr;
+  min-height: 100vh;
+  padding: calc(var(--pad) + var(--border-width));
+  position: relative;
+  z-index: 10;
+}
+
+/* Header */
+.site-header {
+  position: sticky;
+  top: calc(var(--pad) + var(--border-width) + 20px);
+  height: calc(100vh - (var(--pad) + var(--border-width)) * 2 - 40px);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding-right: 40px;
+  border-right: var(--border-width) solid var(--c-border);
+  transition: border-color var(--transition-speed) var(--transition-ease);
+}
+
+.header-top {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.site-title {
+  font-size: 24px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  line-height: 1.1;
+}
+
+.site-subtitle {
+  font-size: 13px;
+  opacity: 0.6;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+/* Menu de Navegação */
+.nav-menu {
+  margin-top: 40px;
+}
+
+.nav-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.nav-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.nav-dot {
+  width: 6px;
+  height: 6px;
+  background-color: var(--c-text);
+  border-radius: 50%;
+  opacity: 0;
+  transform: scale(0);
+  transition: opacity var(--transition-speed) var(--transition-ease),
+              transform var(--transition-speed) var(--transition-ease),
+              background-color var(--transition-speed) var(--transition-ease);
+}
+
+.nav-link {
+  font-size: 14px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  opacity: 0.5;
+}
+
+.nav-link:hover {
+  opacity: 0.8;
+}
+
+.nav-item.active .nav-dot {
+  opacity: 1;
+  transform: scale(1);
+  background-color: var(--c-accent);
+}
+
+.nav-item.active .nav-link {
+  opacity: 1;
+  font-weight: 800;
+}
+
+/* Customizadores */
+.style-controls {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-top: auto;
+}
+
+.control-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.control-label {
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  opacity: 0.5;
+}
+
+.control-buttons {
+  display: flex;
+  border: var(--border-width) solid var(--c-border);
+  width: fit-content;
+  transition: border-color var(--transition-speed) var(--transition-ease);
+}
+
+.btn-toggle {
+  padding: 6px 12px;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  cursor: pointer;
+  transition: background-color var(--transition-speed) var(--transition-ease),
+              color var(--transition-speed) var(--transition-ease);
+}
+
+.btn-toggle:not(:last-child) {
+  border-right: var(--border-width) solid var(--c-border);
+}
+
+.btn-toggle.active {
+  background-color: var(--c-border-active);
+  color: var(--c-bg);
+  font-weight: 600;
+}
+
+/* Conteúdo Principal */
+.main-content {
+  padding-left: 60px;
+  padding-top: 20px;
+  padding-bottom: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+  max-width: 900px;
+  animation: fadeIn 0.8s var(--transition-ease);
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(15px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.section-title {
+  font-size: 28px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 30px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.section-title::after {
+  content: '';
+  flex-grow: 1;
+  height: var(--border-width);
+  background-color: var(--c-border);
+  transition: background-color var(--transition-speed) var(--transition-ease);
+}
+
+.info-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 40px 60px;
+  border-top: var(--border-width) solid var(--c-border);
+  border-bottom: var(--border-width) solid var(--c-border);
+  padding: 40px 0;
+  transition: border-color var(--transition-speed) var(--transition-ease);
+}
+
+.info-block {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.info-label {
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  opacity: 0.5;
+}
+
+.info-value {
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+.intro-text {
+  font-size: 18px;
+  line-height: 1.7;
+  font-weight: 400;
+  opacity: 0.9;
+}
+
+/* Timeline de Formação */
+.timeline {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  padding-left: 20px;
+}
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  top: 5px;
+  left: 0;
+  width: var(--border-width);
+  height: 100%;
+  background-color: var(--c-border);
+  transition: background-color var(--transition-speed) var(--transition-ease);
+}
+
+.timeline-item {
+  position: relative;
+  padding-bottom: 40px;
+}
+
+.timeline-item:last-child {
+  padding-bottom: 10px;
+}
+
+.timeline-marker {
+  position: absolute;
+  top: 6px;
+  left: -23px;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background-color: var(--c-border-active);
+  transition: background-color var(--transition-speed) var(--transition-ease);
+}
+
+.timeline-date {
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  opacity: 0.5;
+  margin-bottom: 8px;
+}
+
+.timeline-title {
+  font-size: 16px;
+  font-weight: 800;
+  margin-bottom: 5px;
+}
+
+.timeline-institution {
+  font-size: 13px;
+  opacity: 0.8;
+  margin-bottom: 10px;
+}
+
+.timeline-desc {
+  font-size: 13px;
+  line-height: 1.5;
+  opacity: 0.7;
+}
+
+/* Cursos e Idiomas */
+.course-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  border-top: var(--border-width) solid var(--c-border);
+  padding-top: 25px;
+  transition: border-color var(--transition-speed) var(--transition-ease);
+}
+
+.course-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 20px;
+}
+
+.course-info {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.course-title {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.course-platform {
+  font-size: 12px;
+  opacity: 0.6;
+}
+
+.course-hours {
+  font-size: 11px;
+  opacity: 0.5;
+  text-align: right;
+  white-space: nowrap;
+}
+
+.tag-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.tag-pill {
+  padding: 4px 10px;
+  font-size: 11px;
+  border: var(--border-width) solid var(--c-border);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  transition: border-color var(--transition-speed) var(--transition-ease),
+              background-color var(--transition-speed) var(--transition-ease);
+}
+
+.tag-pill:hover {
+  border-color: var(--c-border-active);
+}
+
+/* Portfólio */
+.portfolio-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 30px;
+  border-top: var(--border-width) solid var(--c-border);
+  padding-top: 30px;
+  transition: border-color var(--transition-speed) var(--transition-ease);
+}
+
+.portfolio-card {
+  display: flex;
+  flex-direction: column;
+  border: var(--border-width) solid var(--c-border);
+  background-color: var(--c-card-bg);
+  transition: border-color var(--transition-speed) var(--transition-ease),
+              transform var(--transition-speed) var(--transition-ease),
+              box-shadow var(--transition-speed) var(--transition-ease);
+}
+
+.portfolio-card:hover {
+  border-color: var(--c-border-active);
+  transform: translateY(-4px);
+}
+
+.portfolio-preview {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border-bottom: var(--border-width) solid var(--c-border);
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(135deg, rgba(0,0,0,0.02) 25%, transparent 25%),
+              linear-gradient(225deg, rgba(0,0,0,0.02) 25%, transparent 25%),
+              linear-gradient(45deg, rgba(0,0,0,0.02) 25%, transparent 25%),
+              linear-gradient(315deg, rgba(0,0,0,0.02) 25%, transparent 25%);
+  background-size: 20px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: border-color var(--transition-speed) var(--transition-ease);
+}
+
+.theme-dark .portfolio-preview {
+  background: linear-gradient(135deg, rgba(255,255,255,0.02) 25%, transparent 25%),
+              linear-gradient(225deg, rgba(255,255,255,0.02) 25%, transparent 25%),
+              linear-gradient(45deg, rgba(255,255,255,0.02) 25%, transparent 25%),
+              linear-gradient(315deg, rgba(255,255,255,0.02) 25%, transparent 25%);
+  background-size: 20px 20px;
+}
+
+.portfolio-preview svg {
+  width: 50%;
+  height: 50%;
+  opacity: 0.6;
+  transition: transform 0.5s var(--transition-ease), opacity var(--transition-speed) var(--transition-ease);
+}
+
+.portfolio-card:hover .portfolio-preview svg {
+  transform: scale(1.1);
+  opacity: 0.9;
+}
+
+.portfolio-info {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  gap: 12px;
+}
+
+.portfolio-title-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+.portfolio-title {
+  font-size: 16px;
+  font-weight: 800;
+}
+
+.portfolio-year {
+  font-size: 11px;
+  opacity: 0.5;
+  font-weight: 600;
+}
+
+.portfolio-desc {
+  font-size: 13px;
+  line-height: 1.5;
+  opacity: 0.7;
+  flex-grow: 1;
+}
+
+.portfolio-tech {
+  margin-top: 5px;
+}
+
+.portfolio-actions {
+  display: flex;
+  border-top: var(--border-width) solid var(--c-border);
+  transition: border-color var(--transition-speed) var(--transition-ease);
+}
+
+.portfolio-btn {
+  flex: 1;
+  padding: 10px;
+  font-size: 11px;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-weight: 600;
+  transition: background-color var(--transition-speed) var(--transition-ease),
+              color var(--transition-speed) var(--transition-ease);
+}
+
+.portfolio-btn:not(:last-child) {
+  border-right: var(--border-width) solid var(--c-border);
+}
+
+.portfolio-btn:hover {
+  background-color: var(--c-border-active);
+  color: var(--c-bg);
+}
+
+/* Formulário de Contato */
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  border-top: var(--border-width) solid var(--c-border);
+  padding-top: 30px;
+  transition: border-color var(--transition-speed) var(--transition-ease);
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.form-label {
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  opacity: 0.5;
+  font-weight: 600;
+}
+
+.form-control {
+  border: var(--border-width) solid var(--c-border);
+  background-color: var(--c-card-bg);
+  color: var(--c-text);
+  padding: 12px;
+  font-size: 14px;
+  transition: border-color var(--transition-speed) var(--transition-ease),
+              background-color var(--transition-speed) var(--transition-ease);
+  width: 100%;
+}
+
+.form-control:focus {
+  outline: none;
+  border-color: var(--c-border-active);
+}
+
+.form-textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+.form-group.has-error .form-control {
+  border-color: hsl(0, 75%, 50%);
+}
+
+.error-message {
+  font-size: 11px;
+  color: hsl(0, 75%, 55%);
+  margin-top: 4px;
+  display: none;
+}
+
+.form-group.has-error .error-message {
+  display: block;
+}
+
+.btn-submit, .btn-action {
+  border: var(--border-width) solid var(--c-border);
+  background-color: transparent;
+  color: var(--c-text);
+  padding: 14px 28px;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-weight: 600;
+  cursor: pointer;
+  align-self: flex-start;
+  display: inline-block;
+  text-align: center;
+  transition: background-color var(--transition-speed) var(--transition-ease),
+              color var(--transition-speed) var(--transition-ease),
+              border-color var(--transition-speed) var(--transition-ease);
+}
+
+.btn-submit:hover, .btn-action:hover {
+  background-color: var(--c-border-active);
+  color: var(--c-bg);
+  border-color: var(--c-border-active);
+}
+
+/* Modal */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  z-index: 2000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.4s var(--transition-ease);
+}
+
+.modal-overlay.is-visible {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.modal-card {
+  background-color: var(--c-bg);
+  border: var(--border-width) solid var(--c-border);
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
+  width: 90%;
+  max-width: 440px;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  text-align: center;
+  transform: scale(0.95);
+  transition: transform 0.4s var(--transition-ease), border-color var(--transition-speed) var(--transition-ease);
+}
+
+.modal-overlay.is-visible .modal-card {
+  transform: scale(1);
+}
+
+.modal-icon {
+  width: 50px;
+  height: 50px;
+  color: var(--c-accent);
+  margin-bottom: 5px;
+}
+
+.modal-title {
+  font-size: 20px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.modal-text {
+  font-size: 13px;
+  line-height: 1.6;
+  opacity: 0.7;
+}
+
+.modal-close-btn {
+  border: var(--border-width) solid var(--c-border);
+  background-color: transparent;
+  padding: 10px 24px;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: background-color var(--transition-speed) var(--transition-ease),
+              color var(--transition-speed) var(--transition-ease),
+              border-color var(--transition-speed) var(--transition-ease);
+}
+
+.modal-close-btn:hover {
+  background-color: var(--c-border-active);
+  color: var(--c-bg);
+  border-color: var(--c-border-active);
+}
+
+/* Rodapé */
+.site-footer {
+  font-size: 11px;
+  opacity: 0.4;
+  margin-top: auto;
+  padding-top: 30px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+/* Responsividade */
+@media (max-width: 900px) {
+  .app-container {
+    grid-template-columns: 1fr;
+    padding: calc(var(--pad) + var(--border-width));
+  }
+
+  .site-header {
+    position: relative;
+    top: 0;
+    height: auto;
+    border-right: none;
+    border-bottom: var(--border-width) solid var(--c-border);
+    padding-right: 0;
+    padding-bottom: 30px;
+    margin-bottom: 40px;
+    gap: 30px;
+  }
+
+  .nav-menu {
+    margin-top: 15px;
+  }
+
+  .nav-list {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 15px 25px;
+  }
+
+  .style-controls {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 20px 30px;
+    margin-top: 10px;
+  }
+
+  .main-content {
+    padding-left: 0;
+    padding-top: 0;
+  }
+
+  .info-grid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+    padding: 30px 0;
+  }
+}
+
+@media (max-width: 480px) {
+  :root {
+    --pad: 12px;
+  }
+  
+  .site-title {
+    font-size: 20px;
+  }
+  
+  .nav-list {
+    gap: 10px 15px;
+  }
+  
+  .nav-link {
+    font-size: 12px;
+  }
+}
+</pre>
+
+    <h2 class="page-break">Arquivo: js/app.js</h2>
+    <pre>document.addEventListener('DOMContentLoaded', () => {
+  initStylePreferences();
+  initCanvasBackground();
+});
+
+// Leitura segura local
+function safeGetLocalStorage(key) {
+  try {
+    return localStorage.getItem(key);
+  } catch (error) {
+    console.warn("Acesso ao localStorage bloqueado pelo navegador:", error);
+    return null;
+  }
+}
+
+// Gravação segura local
+function safeSetLocalStorage(key, value) {
+  try {
+    localStorage.setItem(key, value);
+  } catch (error) {
+    console.warn("Acesso ao localStorage bloqueado pelo navegador:", error);
+  }
+}
+
+// Inicializa preferências visuais
+function initStylePreferences() {
+  const bodyElement = document.body;
+  const rootElement = document.documentElement;
+
+  const btnThemeLight = document.getElementById('theme-light');
+  const btnThemeDark = document.getElementById('theme-dark');
+  const btnFontSans = document.getElementById('font-sans-btn');
+  const btnFontMono = document.getElementById('font-mono-btn');
+
+  const savedTheme = safeGetLocalStorage('portfolio-theme');
+  if (savedTheme) {
+    applyTheme(savedTheme);
+  } else {
+    const prefersDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches;
+    applyTheme(prefersDarkMode ? 'dark' : 'light');
+  }
+
+  if (btnThemeLight && btnThemeDark) {
+    btnThemeLight.addEventListener('click', () => applyTheme('light'));
+    btnThemeDark.addEventListener('click', () => applyTheme('dark'));
+  }
+
+  // Aplica tema selecionado
+  function applyTheme(theme) {
+    if (theme === 'dark') {
+      rootElement.classList.remove('theme-light');
+      rootElement.classList.add('theme-dark');
+      bodyElement.classList.remove('theme-light');
+      bodyElement.classList.add('theme-dark');
+      if (btnThemeDark) btnThemeDark.classList.add('active');
+      if (btnThemeLight) btnThemeLight.classList.remove('active');
+    } else {
+      rootElement.classList.remove('theme-dark');
+      rootElement.classList.add('theme-light');
+      bodyElement.classList.remove('theme-dark');
+      bodyElement.classList.add('theme-light');
+      if (btnThemeLight) btnThemeLight.classList.add('active');
+      if (btnThemeDark) btnThemeDark.classList.remove('active');
+    }
+    safeSetLocalStorage('portfolio-theme', theme);
+  }
+
+  const savedFont = safeGetLocalStorage('portfolio-font');
+  if (savedFont) {
+    applyFont(savedFont);
+  } else {
+    applyFont('sans');
+  }
+
+  if (btnFontSans && btnFontMono) {
+    btnFontSans.addEventListener('click', () => applyFont('sans'));
+    btnFontMono.addEventListener('click', () => applyFont('mono'));
+  }
+
+  // Aplica fonte selecionada
+  function applyFont(fontStyle) {
+    if (fontStyle === 'mono') {
+      rootElement.classList.remove('font-sans');
+      rootElement.classList.add('font-mono');
+      bodyElement.classList.remove('font-sans');
+      bodyElement.classList.add('font-mono');
+      if (btnFontMono) btnFontMono.classList.add('active');
+      if (btnFontSans) btnFontSans.classList.remove('active');
+    } else {
+      rootElement.classList.remove('font-mono');
+      rootElement.classList.add('font-sans');
+      bodyElement.classList.remove('font-mono');
+      bodyElement.classList.add('font-sans');
+      if (btnFontSans) btnFontSans.classList.add('active');
+      if (btnFontMono) btnFontMono.classList.remove('active');
+    }
+    safeSetLocalStorage('portfolio-font', fontStyle);
+  }
+}
+
+// Inicializa fundo animado
+function initCanvasBackground() {
+  const canvasElement = document.getElementById('canvas-bg');
+  if (!canvasElement) return;
+
+  const canvasContext = canvasElement.getContext('2d');
+  let particleArray = [];
+  let animationFrameId;
+
+  const mousePosition = {
+    x: null,
+    y: null,
+    radius: 120
+  };
+
+  // Redimensiona o canvas
+  function resizeCanvas() {
+    canvasElement.width = window.innerWidth;
+    canvasElement.height = window.innerHeight;
+    setupParticles();
+  }
+
+  class Particle {
+    // Inicializa a partícula
+    constructor(x, y) {
+      this.x = x;
+      this.y = y;
+      this.velocityX = (Math.random() - 0.5) * 0.35;
+      this.velocityY = (Math.random() - 0.5) * 0.35;
+      this.baseRadius = Math.random() * 1.5 + 0.5;
+      this.currentRadius = this.baseRadius;
+    }
+
+    // Desenha a partícula
+    draw() {
+      const textColorHex = getComputedStyle(document.body).getPropertyValue('--c-text');
+      canvasContext.fillStyle = textColorHex;
+      canvasContext.beginPath();
+      canvasContext.arc(this.x, this.y, this.currentRadius, 0, Math.PI * 2);
+      canvasContext.closePath();
+      canvasContext.fill();
+    }
+
+    // Atualiza a partícula
+    update() {
+      this.x += this.velocityX;
+      this.y += this.velocityY;
+
+      if (this.x < 0 || this.x > canvasElement.width) this.velocityX = -this.velocityX;
+      if (this.y < 0 || this.y > canvasElement.height) this.velocityY = -this.velocityY;
+
+      if (mousePosition.x !== null && mousePosition.y !== null) {
+        const distanceX = mousePosition.x - this.x;
+        const distanceY = mousePosition.y - this.y;
+        const totalDistance = Math.hypot(distanceX, distanceY);
+
+        if (totalDistance < mousePosition.radius) {
+          this.currentRadius = this.baseRadius * (1 + (mousePosition.radius - totalDistance) / mousePosition.radius * 0.5);
+          const forceFactor = (mousePosition.radius - totalDistance) / mousePosition.radius;
+          this.x += (distanceX / totalDistance) * forceFactor * 0.2;
+          this.y += (distanceY / totalDistance) * forceFactor * 0.2;
+        } else {
+          this.currentRadius = this.baseRadius;
+        }
+      } else {
+        this.currentRadius = this.baseRadius;
+      }
+
+      this.draw();
+    }
+  }
+
+  // Gera as partículas
+  function setupParticles() {
+    particleArray = [];
+    const particleDensity = window.innerWidth < 768 ? 40 : 100;
+    
+    for (let i = 0; i < particleDensity; i++) {
+      const initialX = Math.random() * canvasElement.width;
+      const initialY = Math.random() * canvasElement.height;
+      particleArray.push(new Particle(initialX, initialY));
+    }
+  }
+
+  // Desenha as conexões
+  function connectParticles() {
+    const isDarkModeActive = document.body.classList.contains('theme-dark') || document.documentElement.classList.contains('theme-dark');
+    const strokeColorRGB = isDarkModeActive ? '255, 255, 255' : '0, 0, 0';
+    const connectionMaxDistance = 100;
+
+    for (let a = 0; a < particleArray.length; a++) {
+      for (let b = a + 1; b < particleArray.length; b++) {
+        const distanceX = particleArray[a].x - particleArray[b].x;
+        const distanceY = particleArray[a].y - particleArray[b].y;
+        const totalDistance = Math.hypot(distanceX, distanceY);
+
+        if (totalDistance < connectionMaxDistance) {
+          const lineOpacity = (1 - totalDistance / connectionMaxDistance) * 0.15;
+          canvasContext.strokeStyle = `rgba(${strokeColorRGB}, ${lineOpacity})`;
+          canvasContext.lineWidth = 0.5;
+          canvasContext.beginPath();
+          canvasContext.moveTo(particleArray[a].x, particleArray[a].y);
+          canvasContext.lineTo(particleArray[b].x, particleArray[b].y);
+          canvasContext.stroke();
+        }
+      }
+
+      if (mousePosition.x !== null && mousePosition.y !== null) {
+        const distanceX = mousePosition.x - particleArray[a].x;
+        const distanceY = mousePosition.y - particleArray[a].y;
+        const totalDistance = Math.hypot(distanceX, distanceY);
+
+        if (totalDistance < mousePosition.radius) {
+          const lineOpacity = (1 - totalDistance / mousePosition.radius) * 0.25;
+          canvasContext.strokeStyle = `rgba(${strokeColorRGB}, ${lineOpacity})`;
+          canvasContext.lineWidth = 0.6;
+          canvasContext.beginPath();
+          canvasContext.moveTo(particleArray[a].x, particleArray[a].y);
+          canvasContext.lineTo(mousePosition.x, mousePosition.y);
+          canvasContext.stroke();
+        }
+      }
+    }
+  }
+
+  // Loop de animação
+  function animate() {
+    canvasContext.clearRect(0, 0, canvasElement.width, canvasElement.height);
+    for (let i = 0; i < particleArray.length; i++) {
+      particleArray[i].update();
+    }
+    connectParticles();
+    animationFrameId = requestAnimationFrame(animate);
+  }
+
+  window.addEventListener('mousemove', (event) => {
+    mousePosition.x = event.clientX;
+    mousePosition.y = event.clientY;
+  });
+
+  window.addEventListener('mouseleave', () => {
+    mousePosition.x = null;
+    mousePosition.y = null;
+  });
+
+  window.addEventListener('resize', () => {
+    cancelAnimationFrame(animationFrameId);
+    resizeCanvas();
+    animate();
+  });
+
+  resizeCanvas();
+  animate();
+}
+</pre>
+
+    <h2 class="page-break">Arquivo: js/contato.js</h2>
+    <pre>document.addEventListener('DOMContentLoaded', () => {
+  const contactForm = document.getElementById('contact-form');
+  const successModalOverlay = document.getElementById('success-modal');
+  const modalCloseButton = document.getElementById('modal-close-btn');
+
+  if (!contactForm) return;
+
+  contactForm.addEventListener('submit', (event) => {
+    event.preventDefault();
+
+    const nameInputField = document.getElementById('name');
+    const emailInputField = document.getElementById('email');
+    const messageInputField = document.getElementById('message');
+
+    let isFormValid = true;
+
+    if (nameInputField.value.trim() === '') {
+      applyInputError(nameInputField, 'Por favor, insira o seu nome.');
+      isFormValid = false;
+    } else {
+      clearInputError(nameInputField);
+    }
+
+    const emailValueString = emailInputField.value.trim();
+    if (emailValueString === '') {
+      applyInputError(emailInputField, 'Por favor, insira o seu e-mail.');
+      isFormValid = false;
+    } else if (!isEmailFormatValid(emailValueString)) {
+      applyInputError(emailInputField, 'Por favor, insira um e-mail com formato válido (usuario@dominio.com).');
+      isFormValid = false;
+    } else {
+      clearInputError(emailInputField);
+    }
+
+    if (messageInputField.value.trim() === '') {
+      applyInputError(messageInputField, 'Por favor, digite sua mensagem.');
+      isFormValid = false;
+    } else {
+      clearInputError(messageInputField);
+    }
+
+    if (isFormValid) {
+      nameInputField.value = '';
+      emailInputField.value = '';
+      messageInputField.value = '';
+      toggleSuccessModal(true);
+    }
+  });
+
+  // Exibe erro visual
+  function applyInputError(inputElement, errorMessageText) {
+    const inputContainerGroup = inputElement.parentElement;
+    const errorFeedbackElement = inputContainerGroup.querySelector('.error-message');
+    inputContainerGroup.classList.add('has-error');
+    if (errorFeedbackElement) {
+      errorFeedbackElement.textContent = errorMessageText;
+    }
+  }
+
+  // Remove erro visual
+  function clearInputError(inputElement) {
+    const inputContainerGroup = inputElement.parentElement;
+    inputContainerGroup.classList.remove('has-error');
+  }
+
+  // Valida formato email
+  function isEmailFormatValid(emailAddress) {
+    const emailRegexPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return emailRegexPattern.test(emailAddress);
+  }
+
+  // Controla modal sucesso
+  function toggleSuccessModal(shouldShow) {
+    if (successModalOverlay) {
+      if (shouldShow) {
+        successModalOverlay.classList.add('is-visible');
+      } else {
+        successModalOverlay.classList.remove('is-visible');
+      }
+    }
+  }
+
+  if (modalCloseButton) {
+    modalCloseButton.addEventListener('click', () => toggleSuccessModal(false));
+  }
+
+  if (successModalOverlay) {
+    successModalOverlay.addEventListener('click', (event) => {
+      if (event.target === successModalOverlay) {
+        toggleSuccessModal(false);
+      }
+    });
+  }
+});
+</pre>
+  </section>
+
+</body>
+</html>
